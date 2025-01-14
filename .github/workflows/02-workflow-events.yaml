@@ -1,6 +1,6 @@
 # Sample Workflow events
 name: 02 - Workflow Events
-on: push
+on: workflow_dispatch
 env:
     GH_EVENT_NAME: ${{github.event_name}}
     GH_REPO: ${{github.event.repository.name}}
