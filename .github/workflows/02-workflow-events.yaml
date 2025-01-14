@@ -4,7 +4,6 @@ on: push
 env:
     GH_EVENT_NAME: ${{github.event_name}}
     GH_REPO: ${{github.event.repository.name}}
-    GH_EVENT: ${{github.event}}
 jobs:
   echo: 
     runs-on: ubuntu-latest
@@ -12,5 +11,4 @@ jobs:
       - name: "Show the trigger"
         run: |
           echo "GitHub event ${GH_EVENT_NAME} occured for ${GH_REPO}"
-          echo "with event ${GH_EVENT}"
           exit 0
