@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: "01 - Building Blocks" 
+
+# Controls when the workflow will run
+on:
+# Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# This workflow contains two jobs.
+jobs:
+# The first  job is echo-hello which prints a kind of hello statement.
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello, World!"
+
+# The second job echp-goodbye is a multi-step job.
+  echo-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Failed step
+        run: | 
+          echo "I will fail"
+          exit 1
+      - name: Say goodbye
+        run: echo "Goodbye!"
+
