@@ -8,9 +8,9 @@ env:
 jobs:
   echo: 
     runs-on: ubuntu-latest
-      steps:
-        - name: "Show the trigger"
-          run: |
-            echo "GitHub event ${GH_EVENT_NAME} occured for ${GH_REPO}"
-            echo "with event ${GH_EVENT}"
-            exit 0
+    steps:
+      - name: "Show the trigger"
+        run: |
+          echo "GitHub event ${GH_EVENT_NAME} occured for ${GH_REPO}"
+          echo "with event ${GH_EVENT}"
+          exit 0
