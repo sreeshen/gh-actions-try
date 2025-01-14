@@ -4,7 +4,7 @@ on: push
 env:
     GH_EVENT_NAME: ${{github.event_name}}
     GH_REPO: ${{github.event.repository.name}}
-    GH_EVENT: ${{github.event.event_name}}
+    GH_EVENT: ${{github.event}}
 jobs:
   echo: 
     runs-on: ubuntu-latest
