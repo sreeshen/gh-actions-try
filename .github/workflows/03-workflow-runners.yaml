@@ -1,0 +1,14 @@
+# Test out different GitHub runners
+name: 03 - Workflow Runners
+on: push
+jobs:
+  ubuntu-echo:
+    runs-on: windows-latest
+    steps:
+    - name: Show OS
+      shell: bash
+      run: |
+        echo "This job is running on an Ubuntu runner."
+        echo "OS is ${{env.OS}}"
+        exit 0
+
