@@ -1,6 +1,6 @@
 # Test out different GitHub runners
 name: 03 - Workflow Runners
-on: workflow-dispatch
+on: workflow_dispatch
 jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest
